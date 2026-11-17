@@ -25,3 +25,14 @@ Using OnlineGDB:
 2. Select C++17 from the Language dropdown menu in the top-right corner.
 3. Click the green Run button at the top of the screen to compile and execute the program.
 4. Enter five digits (0 through 9) in the bottom console window when prompted.
+
+TEST RECORDS
+
+| Test Case | Starting / Input Data | Expected Result | Actual Output | Match? |
+| :--- | :--- | :--- | :--- | :--- |
+| 1. Example Case | winningDigits: [7, 4, 9, 1, 3] / player: [4, 2, 9, 7, 3] | 2 matches (indices 2 and 4) | [Run and record output] | [Yes/No] |
+| 2. All Match | winningDigits: [7, 4, 9, 1, 3] / player: [7, 4, 9, 1, 3] | 5 matches | [Run and record output] | [Yes/No] |
+| 3. Zero Matches | winningDigits: [7, 4, 9, 1, 3] / player: [0, 0, 0, 0, 0] | 0 matches | [Run and record output] | [Yes/No] |
+| 4. Repeated Digits | winningDigits: [1, 1, 2, 2, 3] / player: [1, 2, 2, 3, 3] | 3 matches (indices 0, 2, 4) | [Run and record output] | [Yes/No] |
+| 5. Custom Fixed Test | winningDigits: [5, 5, 5, 5, 5] / player: [5, 0, 5, 0, 5] | 3 matches (tests repeated digit isolation at indices 0, 2, 4) | [Run and record output] | [Yes/No] |
+| 6. Final Random Run | winningDigits: [3, 6, 7, 5, 3] / player: [3, 6, 7, 5, 3] | All digits 0-9; 5 matches | Winning Digits: 3 6 7 5 3 / Player Digits: 3 6 7 5 3 / Matches: 5 | Yes |
