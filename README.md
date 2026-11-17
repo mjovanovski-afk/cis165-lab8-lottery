@@ -36,3 +36,23 @@ TEST RECORDS
 | 4. Repeated Digits | winningDigits: [1, 1, 2, 2, 3] / player: [1, 2, 2, 3, 3] | 3 matches (indices 0, 2, 4) | Winning Digits: 1 1 2 2 3 / Player Digits: 1 2 2 3 3 / Matches: 3 | Yes |
 | 5. Custom Fixed Test | winningDigits: [5, 5, 5, 5, 5] / player: [5, 0, 5, 0, 5] | 3 matches (tests repeated digit isolation at indices 0, 2, 4) | Winning Digits: 5 5 5 5 5 / Player Digits: 5 0 5 0 5 / Matches: 3 | Yes |
 | 6. Final Random Run | winningDigits: [3, 6, 7, 5, 3] / player: [3, 6, 7, 5, 3] | All digits 0-9; 5 matches | Winning Digits: 3 6 7 5 3 / Player Digits: 3 6 7 5 3 / Matches: 5 | Yes |
+
+1. How does the random expression keep every digit between 0 and 9?rand() % 10 divides a random number by 10 and keeps the remainder. When you divide any positive number by 10, the remainder can only ever be 0 through 9.
+
+2. Why does a matching digit in another position not count?
+The loop checks winningDigits[i] == player[i], which only compares the same slot (i) in both arrays at the same time. It never checks other slots.
+
+3. Trace the count through the example arrays 7, 4, 9, 1, 3 and 4, 2, 9, 7, 3:
+
+Index 0: 7 and 4 don't match (count = 0)
+
+Index 1: 4 and 2 don't match (count = 0)
+
+Index 2: 9 and 9 match (count = 1)
+
+Index 3: 1 and 7 don't match (count = 1)
+
+Index 4: 3 and 3 match (count = 2)
+
+4. Why do array loops stop before SIZE, and what did your fixed tests establish?
+Arrays start counting at 0, so a 5-item array uses slots 0, 1, 2, 3, 4. Stopping before SIZE (5) keeps the loop from reading past the end of the array. The fixed tests proved that the code accurately counts 0 matches, all 5 matches, and duplicate numbers without counting matches in the wrong spot.
