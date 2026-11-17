@@ -17,3 +17,11 @@ Calculations and Comparisons:
 
 Checks and Expected Output:
 - Print all five elements of winningDigits, all five elements of player, and the final matchCount with clear labels.
+
+COMPILE AND RUN INSTRUCTIONS
+
+Using OnlineGDB:
+1. Open OnlineGDB and paste the contents of lottery.cpp into the main editor.
+2. Select C++17 from the Language dropdown menu in the top-right corner.
+3. Click the green Run button at the top of the screen to compile and execute the program.
+4. Enter five digits (0 through 9) in the bottom console window when prompted.
